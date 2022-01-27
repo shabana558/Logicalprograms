@@ -11,18 +11,20 @@ namespace Logicalprograms
         static void Main(string[] args)
         {
 
-            int val1 = 0, val2 = 1, val3, i, n;
-            n = 7;
-            Console.WriteLine("Fibonacci series:");
-            Console.Write(val1 + " " + val2 + " ");
-            for (i = 2; i < n; ++i)
-            {
-                val3 = val1 + val2;
-                Console.Write(val3 + " ");
-                val1 = val2;
-                val2 = val3;
+           
+                Console.WriteLine("please enter number to reverse");
+                int number = Convert.ToInt32(Console.ReadLine());
+                int reminder, reverse = 0;
+                while (number > 0)
+                {
+                    reminder = number % 10;
+                    reverse = (reverse * 10) + reminder;
+                    number = number / 10;
 
-            }
+                }
+                Console.WriteLine("After reverse:" + reverse);
+
+            
         }
     }
 }
