@@ -1,10 +1,14 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
 namespace Logicalprograms
 {
-    internal class Program
+    internal class Primenumber
     {
-        static void Main(string[] args)
+        public static void primenumber()
         {
 
             Console.Write("Enter a Number : ");
@@ -21,15 +25,13 @@ namespace Logicalprograms
             }
             if (k == 2)
             {
-                Console.WriteLine("Entered Number is a Prime Number ");
+                Console.WriteLine("Entered Number is a Prime Number" );
             }
             else
             {
                 Console.WriteLine("Not a Prime Number");
             }
             Console.ReadLine();
-
         }
-
     }
 }
