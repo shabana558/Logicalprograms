@@ -6,11 +6,10 @@ using System.Threading.Tasks;
 
 namespace Logicalprograms
 {
-    internal class Program
+    internal class Dayofweek
     {
-        static void Main(string[] args)
+        public static void dayofweek()
         {
-
 
             int week;
 
@@ -51,6 +50,7 @@ namespace Logicalprograms
             }
 
             Console.ReadLine();
+
         }
     }
 }
