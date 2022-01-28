@@ -1,10 +1,14 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
 namespace Logicalprograms
 {
-    internal class Program
+    internal class Perfectnumber
     {
-        static void Main(string[] args)
+        public static void perfectnumber()
         {
             int number, sum = 0, n;
             Console.Write("enter the Number");
