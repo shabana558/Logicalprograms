@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace Logicalprograms
 {
-    internal class Program
+    internal class Binaryconversion
     {
-        static void Main(string[] args)
+        public static void binaryconversion()
         {
             Console.Write("Enter the Decimal Number : ");
             int number = int.Parse(Console.ReadLine());
@@ -22,7 +22,6 @@ namespace Logicalprograms
             Console.WriteLine($"Binary Represenation of the given Number : {Result}");
 
             Console.ReadLine();
-
         }
     }
 }

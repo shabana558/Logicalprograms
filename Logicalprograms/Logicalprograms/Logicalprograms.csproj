@@ -43,6 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Binaryconversion.cs" />
     <Compile Include="Dayofweek.cs" />
     <Compile Include="Fibonocciseries.cs" />
     <Compile Include="Program.cs" />
