@@ -1,4 +1,7 @@
 ﻿using System;
+using System.Diagnostics;
+using System.Threading;
+
 
 namespace Logicalprograms
 {
@@ -6,29 +9,27 @@ namespace Logicalprograms
     {
         static void Main(string[] args)
         {
-            int number, sum = 0, n;
-            Console.Write("enter the Number");
-            number = int.Parse(Console.ReadLine());
-            n = number;
-            for (int i = 1; i < number; i++)
-            {
-                if (number % i == 0)
-                {
-                    sum = sum + i;
-                }
-            }
-            if (sum == n)
-            {
-                Console.WriteLine("\n Entered number is a perfect number");
-                Console.ReadLine();
-            }
-            else
-            {
-                Console.WriteLine("\n Entered number is not a perfect number");
-                Console.ReadLine();
 
-            }
+			// Create new stopwatch
+			Stopwatch stopwatch = new Stopwatch();
+
+			// Begin timing
+			stopwatch.Start();
+
+			// Do something
+			for (int i = 0; i < 1000; i++)
+			{
+				Thread.Sleep(1);
+			}
+
+			// Stop timing
+			stopwatch.Stop();
+
+			// Write result
+			Console.WriteLine("Time elapsed: {0}",
+				stopwatch.Elapsed);
+
+		}
 
         }
     }
-}
