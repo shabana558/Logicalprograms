@@ -11,45 +11,43 @@ namespace Logicalprograms
     {
         public static void Main(string[] args)
         {
-            DaysOfWeek.ReadInput();
+            NewtonSqrt.ReadInput();
             Console.ReadLine();
 
         }
     }
-    class Utility
+    class NewtonSqrt
     {
-        public static int ReadInput()
-        {
-            int input = Convert.ToInt32(Console.ReadLine());
-            return input;
-        }
-    }
-    class DaysOfWeek
-    {
-
         public static void ReadInput()
         {
-            //Get input from Utility Class
-            Console.WriteLine("Enter the date(1-30)");
-            int d = Utility.ReadInput();
-            Console.WriteLine("Enter the month (1-12)");
-            int m = Utility.ReadInput();
-            Console.WriteLine("Enter the year(yyyy)");
-            int y = Utility.ReadInput();
-            //Call DayCalculate Function
-            DayCalculate(d, m, y);
+            //Read input from user
+            Console.WriteLine("Enter value of c");
+            double c = Convert.ToDouble(Console.ReadLine());
+            NewtonSquareRoot(c);
         }
-        private static void DayCalculate(int d, int m, int y)
+
+
+        private static void NewtonSquareRoot(double c)
         {
-            //List to print the week
-            List<string> day = new List<string>() { "Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday" };
-            //Given formula: Gregorian calendar
-            int y0 = y - (14 - m) / 12;
-            int x = y0 + y0 / 4 - y0 / 100 + y0 / 400;
-            int m0 = m + 12 * ((14 - m) / 12) - 2;
-            int d0 = (d + x + 31 * m0 / 12) % 7;
-            //Print day of week 
-            Console.WriteLine("Day is :" + day[d0]);
+            //Given: local variables
+            double t = c;
+
+            //Given l= 1^-5 = 0.00001
+            double l = 0.00001;
+            double sqrtValue;
+
+            while (true)
+            {
+                //Compute average of c/t and t
+                sqrtValue = 0.5 * (t + (c / t));
+                if (Math.Abs(sqrtValue - t) < l)
+                {
+                    break;
+                }
+                t = sqrtValue;
+            }
+            Console.WriteLine("Root Value is :" + Math.Round(sqrtValue, 4));
+
         }
     }
 }
