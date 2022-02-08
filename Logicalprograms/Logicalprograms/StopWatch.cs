@@ -1,15 +1,13 @@
-﻿
-using System;
+﻿using System;
 using System.Diagnostics;
 using System.Threading;
 
 
-namespace LogicalProrams
+namespace Logicalprograms
 {
-
-    class Program
+    internal class StopWatch
     {
-        static void Main(string[] args)
+        public static void stopwatch()
         {
             //create new stopwatch
             Stopwatch stopWatch = new Stopwatch();
@@ -28,9 +26,3 @@ namespace LogicalProrams
         }
     }
 }
-
-           
-        
-
-        
-    
