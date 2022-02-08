@@ -11,46 +11,35 @@ namespace Logicalprograms
     {
         public static void Main(string[] args)
         {
-            NewtonSqrt.ReadInput();
+            Input.MonthlyPayment();
             Console.ReadLine();
 
         }
     }
-    class NewtonSqrt
+    class Input
     {
-        public static void ReadInput()
+        public static void MonthlyPayment()
         {
-            //Read input from user
-            Console.WriteLine("Enter value of c");
-            double c = Convert.ToDouble(Console.ReadLine());
-            NewtonSquareRoot(c);
+            Console.WriteLine("Enter principle");
+            double p = Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine("Enter years");
+            int y = Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine("Enter rate");
+            double R = Convert.ToInt32(Console.ReadLine());
+            int n = 12 * y;
+            double r = (R / (12 * 100));
+            double s = 1 + r;
+            double power = (double)Math.Pow(s, -n);
+            double payment = (p * r) / power;
+            Console.WriteLine("Monthly payment is :{0}", payment);
         }
 
 
-        private static void NewtonSquareRoot(double c)
-        {
-            //Given: local variables
-            double t = c;
-
-            //Given l= 1^-5 = 0.00001
-            double l = 0.00001;
-            double sqrtValue;
-
-            while (true)
-            {
-                //Compute average of c/t and t
-                sqrtValue = 0.5 * (t + (c / t));
-                if (Math.Abs(sqrtValue - t) < l)
-                {
-                    break;
-                }
-                t = sqrtValue;
-            }
-            Console.WriteLine("Root Value is :" + Math.Round(sqrtValue, 4));
-
-        }
     }
 }
+
 
 
 
