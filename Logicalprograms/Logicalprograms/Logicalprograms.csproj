@@ -55,6 +55,7 @@
     <Compile Include="Squareroot.cs" />
     <Compile Include="StopWatch.cs" />
     <Compile Include="Temperatureconversion.cs" />
+    <Compile Include="Week.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
